@@ -17,12 +17,18 @@ public class Mammal extends Animal{
     public Mammal() {
     }
 
-
-    public Mammal(String thuocLoai, int soLuongDe, String tenDongVat, String gioiTinh, int kichThuoc, int canNang, String mauSac, String thucAn, int tuoi) {
-        super(tenDongVat, gioiTinh, kichThuoc, canNang, mauSac, thucAn, tuoi);
+    public Mammal(String thuocLoai, int soLuongDe) {
         this.thuocLoai = thuocLoai;
         this.soLuongDe = soLuongDe;
     }
+
+    public Mammal(String thuocLoai, int soLuongDe, String maDongVat, String tenDongVat, String gioiTinh, int kichThuoc, int canNang, String mauSac, String thucAn, int tuoi) {
+        super(maDongVat, tenDongVat, gioiTinh, kichThuoc, canNang, mauSac, thucAn, tuoi);
+        this.thuocLoai = thuocLoai;
+        this.soLuongDe = soLuongDe;
+    }
+
+
 
     public String getThuocLoai() {
         return thuocLoai;
@@ -44,25 +50,25 @@ public class Mammal extends Animal{
     public void nhap(){
         Scanner sc = new Scanner(System.in);
         super.nhap();
-        System.out.print("Thuộc loài: ");
+        System.out.print("Nhap loai: ");
         this.thuocLoai = sc.nextLine();
-        System.out.print("Số lượng đẻ trong 1 lứa: ");
+        System.out.print("So luong de trong 1 lua: ");
         this.soLuongDe = Integer.parseInt(sc.nextLine());
     }
     @Override
     public void xuat(){
         super.xuat();
-        System.out.print("Thuộc loài: "+this.thuocLoai + "\n" 
-                + "Số lượng đẻ trong lứa: " + this.soLuongDe + "\n"
-        + "Tuổi sinh sản"+this.tuoiSinhSan());
+        System.out.print("Loai: "+this.thuocLoai + "\n" 
+                + "So luong de trong lua: " + this.soLuongDe + "\n"
+        + "Tuoi sinh san: "+this.tuoiSinhSan());
     }
     
     public String tuoiSinhSan(){
          
        if(this.getTuoi() >= 2 || this.getTuoi() <= 15){
-           return "Đang trong độ tuổi sinh sản";
+           return "Dang trong do tuoi sinh san";
        }else{
-           return "Không trong độ tuổi sinh sản"; 
+           return "Khong trong do tuoi sinh san"; 
        }
     }
     

@@ -101,30 +101,30 @@ public class Animal {
 
     public void nhap() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Nhập mã động vật: ");
+        System.out.print("Nhap ma dong vat: ");
         this.maDongVat = sc.nextLine();
-        System.out.print("Nhập tên của động vật: ");
+        System.out.print("Nhap ten dong vat: ");
         this.tenDongVat = sc.nextLine();
-        System.out.print("Nhập giới tính của động vật: ");
+        System.out.print("Nhap gioi tinh dong vat: ");
         this.gioiTinh = sc.nextLine();
-        System.out.print("Nhập kích thước của động vật: ");
-        this.kichThuoc = sc.nextInt();
-        System.out.print("Nhập cân nặng của động vật: ");
+        System.out.print("Nhap kich thuoc dong vat: ");
+        this.kichThuoc = Integer.parseInt(sc.nextLine());
+        System.out.print("Nhap can nang dong vat: ");
         this.canNang = Integer.parseInt(sc.nextLine());
-        System.out.print("Nhập màu sắc của động vật: ");
+        System.out.print("Nhap mau sac dong vat: ");
         this.mauSac = sc.nextLine();
-        System.out.print("Nhập thức ăn của động vật: ");
+        System.out.print("Nhap thuc an dong vat: ");
         this.thucAn = sc.nextLine();
-        System.out.print("Nhập tuổi của động vật: ");
-        this.tuoi = sc.nextInt();
+        System.out.print("Nhap tuoi dong vat: ");
+        this.tuoi = Integer.parseInt(sc.nextLine());
     }
 
     ;
     
     public void xuat() {
-        System.out.println("Mã động vật: " + this.maDongVat + " \n" + "Tên động vật: " + this.tenDongVat + "\n" + "Giới tính: " + this.gioiTinh
-                + "\n" + "Kích thức: " + this.kichThuoc + "\n" + "Cân nặng: " + this.canNang + "\n"
-                + "Màu sắc: " + this.mauSac + "\n" + "Thức ăn: " + this.thucAn + "\n" + "Tuổi: " + this.tuoi);
+        System.out.println("Ma dong vat: " + this.maDongVat + " \n" + "Ten dong vat: " + this.tenDongVat + "\n" + "Gioi tinh: " + this.gioiTinh
+                + "\n" + "Kich thuoc: " + this.kichThuoc + "\n" + "Can nang: " + this.canNang + "\n"
+                + "Mau sac: " + this.mauSac + "\n" + "Thuc an: " + this.thucAn + "\n" + "Tuoi: " + this.tuoi);
     }
 ;
 }

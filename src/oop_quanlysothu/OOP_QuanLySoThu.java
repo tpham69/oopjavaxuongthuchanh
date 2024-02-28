@@ -9,6 +9,8 @@ package oop_quanlysothu;
  * @author Admin
  */
 public class OOP_QuanLySoThu {
-
-   
+    public static void main(String[] args) {
+        Zoo zoo = new Zoo();
+        zoo.menu();
+    }
 }
