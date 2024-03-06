@@ -60,7 +60,7 @@ public class Mammal extends Animal{
         super.xuat();
         System.out.print("Loai: "+this.thuocLoai + "\n" 
                 + "So luong de trong lua: " + this.soLuongDe + "\n"
-        + "Tuoi sinh san: "+this.tuoiSinhSan());
+        + "Tuoi sinh san: "+this.tuoiSinhSan()+"\n");
     }
     
     public String tuoiSinhSan(){

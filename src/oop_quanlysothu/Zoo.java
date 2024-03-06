@@ -20,7 +20,7 @@ public class Zoo {
     public void nhap() {
         int choice;
         do {
-            System.out.print("Moi chon loai de nhap thong tin: \n1.Amphibians \n2.Bird \n3.Fish \n4.Mammal \n5.Reptile \n6.Thoat");
+            System.out.print("Moi chon loai de nhap thong tin: \n1.Amphibians \n2.Bird \n3.Fish \n4.Mammal \n5.Reptile \n6.Thoat\n");
             choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case 1:
@@ -73,12 +73,11 @@ public class Zoo {
     public void suaDongVat() {
         System.out.print("Nhap ma dong vat: ");
         String maCanSua = sc.nextLine();
-
         for (Animal i : list) {
             if (maCanSua.equalsIgnoreCase(i.getMaDongVat())) {
                 int choice;
                 do {
-                    System.out.print("Moi chon loai de nhap thong tin: \n1.Amphibians \n2.Bird \n3.Fish \n4.Mammal \n5.Reptile \n6.Thoat");
+                    System.out.print("Moi chon loai de nhap thong tin: \n1.Amphibians \n2.Bird \n3.Fish \n4.Mammal \n5.Reptile \n6.Thoat\n");
                     choice = Integer.parseInt(sc.nextLine());
                     switch (choice) {
                         case 1:
@@ -112,11 +111,12 @@ public class Zoo {
                             System.out.println("Da sua hoan tat!");
                             break;
                         case 6:
+                            
                             break;
                         default:
                             System.out.println("Chon sai! chon lai!");
                     }
-                } while (true);
+                } while (choice!=6);
 
             }
         }
@@ -152,16 +152,26 @@ public class Zoo {
     }
 
     public void timKhoangCanNang() {
+        ArrayList<Animal> listDVTheoCanNang = new ArrayList<>();
         System.out.print("Nhap can nang bat dau: ");
         int bd = Integer.parseInt(sc.nextLine());
         System.out.print("Nhap can nang ket thuc: ");
         int kt = Integer.parseInt(sc.nextLine());
+        
+        
 
         for (Animal i : list) {
             if (bd <= i.getCanNang() && kt >= i.getCanNang()) {
-                xuat();
-                break;
+                listDVTheoCanNang.add(i);
             }
+        }
+        
+        int count = 1;
+        for (Animal i : listDVTheoCanNang) {
+            System.out.printf("+------ Dong vat %d -------+\n", count);
+            i.xuat();
+            System.out.println();
+            count++;
         }
     }
 
